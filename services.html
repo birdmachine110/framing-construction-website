@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HighPoint Framing | Services</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="navigation-container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">HF</span>
+        <span>HighPoint Framing</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <a href="index.html">Home & Contact</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="account.html">Account</a>
+
+        <button class="login-button" type="button" data-open-login>
+          Login
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-label">Complete structural framing</p>
+
+        <h1>Framing Services</h1>
+
+        <p>
+          From floor systems and wall framing to trusses and structural
+          details, our crews provide complete framing construction services.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="index.html#contact" class="primary-button">
+            Request an Estimate
+          </a>
+
+          <a href="projects.html" class="secondary-button">
+            View Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+
+      <div class="section-heading">
+        <h2>Our Construction Services</h2>
+
+        <p>
+          Services may be completed individually or combined into a complete
+          structural-framing package.
+        </p>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="information-card">
+          <span class="category-label">Residential</span>
+
+          <h3>Custom Home Framing</h3>
+
+          <p>
+            Complete framing for custom homes, including floor systems,
+            exterior walls, interior walls, structural beams, roof systems,
+            blocking, backing, and sheathing.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Multifamily</span>
+
+          <h3>Apartments and Townhomes</h3>
+
+          <p>
+            Efficient framing for apartments, townhomes, duplexes, and other
+            multifamily developments using organized and repeatable production
+            methods.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Commercial</span>
+
+          <h3>Light-Commercial Framing</h3>
+
+          <p>
+            Wood and light-gauge framing services for offices, retail
+            buildings, tenant improvements, mixed-use developments, and other
+            commercial structures.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Structural</span>
+
+          <h3>Floor Systems</h3>
+
+          <p>
+            Installation of floor joists, engineered I-joists, beams,
+            hangers, blocking, rim boards, subfloor sheathing, and associated
+            structural connections.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Structural</span>
+
+          <h3>Roof Systems</h3>
+
+          <p>
+            Roof truss installation, conventional rafter framing, overbuilds,
+            roof sheathing, fascia framing, structural connections, and roof
+            opening coordination.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Renovation</span>
+
+          <h3>Additions and Remodels</h3>
+
+          <p>
+            Structural reframing, additions, new openings, temporary support,
+            selective demolition, structural tie-ins, and repair of existing
+            framing.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Specialty</span>
+
+          <h3>Decks and Outdoor Structures</h3>
+
+          <p>
+            Structural framing for decks, porches, covered patios, pergolas,
+            exterior stairs, and other outdoor construction projects.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Management</span>
+
+          <h3>Project Coordination</h3>
+
+          <p>
+            Foreman oversight, material planning, daily production tracking,
+            coordination with other trades, quality control, and punch-list
+            completion.
+          </p>
+        </article>
+
+        <article class="information-card">
+          <span class="category-label">Quality</span>
+
+          <h3>Framing Inspection and Repair</h3>
+
+          <p>
+            Inspection of framing conditions, identification of construction
+            defects, structural repair work, hardware corrections, and
+            preparation for inspections.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div>
+        <h2>HighPoint Framing</h2>
+        <p>Precision framing for residential and commercial construction.</p>
+      </div>
+
+      <p>
+        &copy; <span class="current-year"></span> HighPoint Framing.
+        All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <div
+    class="modal"
+    id="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="login-modal-title"
+    aria-hidden="true"
+  >
+
+    <div class="modal-background" data-close-login></div>
+
+    <div class="modal-window">
+
+      <button
+        type="button"
+        class="modal-close-button"
+        aria-label="Close login window"
+        data-close-login
+      >
+        &times;
+      </button>
+
+      <h2 id="login-modal-title">Account Login</h2>
+
+      <p>Authorized company personnel only.</p>
+
+      <form id="login-form" novalidate>
+
+        <div class="form-group">
+          <label for="login-username">Username</label>
+
+          <input
+            id="login-username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+
+          <input
+            id="login-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <button type="submit" class="primary-button">
+          Sign In
+        </button>
+
+        <p
+          id="login-form-message"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+      <p class="security-message">
+        Password verification must occur through a secure backend server.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

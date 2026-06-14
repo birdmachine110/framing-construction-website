@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HighPoint Framing | Projects</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="navigation-container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">HF</span>
+        <span>HighPoint Framing</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <a href="index.html">Home & Contact</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="account.html">Account</a>
+
+        <button class="login-button" type="button" data-open-login>
+          Login
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-label">Built to support everything that follows</p>
+
+        <h1>Completed Framing Projects</h1>
+
+        <p>
+          Review examples of residential, multifamily, renovation, and
+          commercial framing projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="index.html#contact" class="primary-button">
+            Request an Estimate
+          </a>
+
+          <a href="services.html" class="secondary-button">
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+
+      <div class="section-heading">
+        <h2>Selected Projects</h2>
+
+        <p>
+          These example projects demonstrate the type of content that an
+          administrator could later create, edit, publish, or remove.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+            alt="Modern custom home"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Custom Home</span>
+
+            <h3>Ridgeview Residence</h3>
+
+            <p>
+              Complete structural framing for a custom residence with complex
+              roof geometry, large window openings, and engineered beams.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1000&q=80"
+            alt="Townhome development"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Multifamily</span>
+
+            <h3>Oak Street Townhomes</h3>
+
+            <p>
+              Phased framing for twelve attached residential units using
+              repeatable wall, floor, and roof assemblies.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+            alt="Commercial office building"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Commercial</span>
+
+            <h3>Northline Offices</h3>
+
+            <p>
+              Interior structural framing and coordinated wall openings for
+              mechanical, electrical, and plumbing systems.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=80"
+            alt="Residential home under construction"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Residential</span>
+
+            <h3>Cedar Valley Home</h3>
+
+            <p>
+              Two-story residential framing package including floor systems,
+              exterior walls, interior walls, roof trusses, and sheathing.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80"
+            alt="Construction project"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Renovation</span>
+
+            <h3>Park Avenue Addition</h3>
+
+            <p>
+              Residential addition involving structural tie-ins, new floor
+              framing, wall framing, roof framing, and exterior sheathing.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="project-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1000&q=80"
+            alt="Wood framing construction"
+          >
+
+          <div class="project-card-content">
+            <span class="category-label">Specialty</span>
+
+            <h3>Mountain View Pavilion</h3>
+
+            <p>
+              Heavy timber and conventional wood framing for an outdoor
+              pavilion with exposed structural components.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div>
+        <h2>HighPoint Framing</h2>
+        <p>Precision framing for residential and commercial construction.</p>
+      </div>
+
+      <p>
+        &copy; <span class="current-year"></span> HighPoint Framing.
+        All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <div
+    class="modal"
+    id="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="login-modal-title"
+    aria-hidden="true"
+  >
+
+    <div class="modal-background" data-close-login></div>
+
+    <div class="modal-window">
+
+      <button
+        type="button"
+        class="modal-close-button"
+        aria-label="Close login window"
+        data-close-login
+      >
+        &times;
+      </button>
+
+      <h2 id="login-modal-title">Account Login</h2>
+
+      <p>Authorized company personnel only.</p>
+
+      <form id="login-form" novalidate>
+
+        <div class="form-group">
+          <label for="login-username">Username</label>
+
+          <input
+            id="login-username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+
+          <input
+            id="login-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <button type="submit" class="primary-button">
+          Sign In
+        </button>
+
+        <p
+          id="login-form-message"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+      <p class="security-message">
+        Password verification must occur through a secure backend server.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

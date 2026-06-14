@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HighPoint Framing | Account</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="navigation-container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">HF</span>
+        <span>HighPoint Framing</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <a href="index.html">Home & Contact</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="account.html" class="active">Account</a>
+
+        <button class="login-button" type="button" data-open-login>
+          Login
+        </button>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-label">Authorized access only</p>
+
+        <h1>Account Administration</h1>
+
+        <p>
+          Secure account access for administrators, managers, and authorized
+          company personnel.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-button" type="button" data-open-login>
+            Open Login
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+
+      <div class="account-login-panel" id="account-login-panel">
+
+        <div class="section-heading">
+          <h2>Secure Account Login</h2>
+
+          <p>
+            A production website must authenticate users through a secure
+            server and database.
+          </p>
+        </div>
+
+        <div class="security-notice">
+
+          <h3>Important Security Requirement</h3>
+
+          <p>
+            Passwords must not be stored in HTML, CSS, browser-side JavaScript,
+            local storage, or session storage.
+          </p>
+
+          <p>
+            The initial administrator account should be created by the backend
+            system. Its temporary password may be
+            <strong>password</strong> during development, but the account must
+            be required to change that password immediately after the first
+            successful login.
+          </p>
+
+        </div>
+
+        <div class="account-buttons">
+
+          <button class="primary-button" type="button" data-open-login>
+            Open Login
+          </button>
+
+          <button
+            class="outline-button"
+            type="button"
+            id="preview-dashboard-button"
+          >
+            Preview Administrator Dashboard
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="administrator-dashboard" id="administrator-dashboard">
+
+        <div class="dashboard-header">
+
+          <div>
+            <h2>Administrator Dashboard</h2>
+
+            <p>
+              This is a browser-side demonstration of the administrative
+              interface.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            class="outline-button"
+            id="logout-button"
+          >
+            Sign Out
+          </button>
+
+        </div>
+
+        <nav class="dashboard-tabs" aria-label="Administrator dashboard">
+
+          <button
+            type="button"
+            class="dashboard-tab active"
+            data-dashboard-tab="content"
+          >
+            Website Content
+          </button>
+
+          <button
+            type="button"
+            class="dashboard-tab"
+            data-dashboard-tab="services"
+          >
+            Services
+          </button>
+
+          <button
+            type="button"
+            class="dashboard-tab"
+            data-dashboard-tab="projects"
+          >
+            Projects
+          </button>
+
+          <button
+            type="button"
+            class="dashboard-tab"
+            data-dashboard-tab="users"
+          >
+            Users and Roles
+          </button>
+
+        </nav>
+
+        <p
+          id="dashboard-message"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
+        <section
+          class="dashboard-panel active"
+          data-dashboard-panel="content"
+        >
+
+          <h3>Website Content</h3>
+
+          <p>
+            Administrators can update headings, paragraphs, contact
+            information, company details, and other website content.
+          </p>
+
+          <div class="dashboard-action-buttons">
+
+            <button
+              type="button"
+              data-administrator-action="Edit home page"
+            >
+              Edit Home Page
+            </button>
+
+            <button
+              type="button"
+              data-administrator-action="Edit contact information"
+            >
+              Edit Contact Information
+            </button>
+
+            <button
+              type="button"
+              data-administrator-action="Edit footer"
+            >
+              Edit Footer
+            </button>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-panel"
+          data-dashboard-panel="services"
+        >
+
+          <div class="dashboard-section-header">
+            <div>
+              <h3>Manage Services</h3>
+
+              <p>Create, edit, publish, disable, or delete services.</p>
+            </div>
+
+            <button
+              type="button"
+              class="primary-button"
+              data-administrator-action="Create service"
+            >
+              Add Service
+            </button>
+          </div>
+
+          <div class="table-container">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Service</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Custom Home Framing</td>
+                  <td>Residential</td>
+                  <td>
+                    <span class="status enabled">Published</span>
+                  </td>
+                  <td>
+                    <div class="table-actions">
+                      <button
+                        type="button"
+                        data-administrator-action="Edit service"
+                      >
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Delete service"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Townhomes and Apartments</td>
+                  <td>Multifamily</td>
+                  <td>
+                    <span class="status enabled">Published</span>
+                  </td>
+                  <td>
+                    <div class="table-actions">
+                      <button
+                        type="button"
+                        data-administrator-action="Edit service"
+                      >
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Delete service"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-panel"
+          data-dashboard-panel="projects"
+        >
+
+          <div class="dashboard-section-header">
+
+            <div>
+              <h3>Manage Projects</h3>
+
+              <p>Create, edit, publish, hide, or delete projects.</p>
+            </div>
+
+            <button
+              type="button"
+              class="primary-button"
+              data-administrator-action="Create project"
+            >
+              Add Project
+            </button>
+
+          </div>
+
+          <div class="table-container">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Ridgeview Residence</td>
+                  <td>Custom Home</td>
+                  <td>
+                    <span class="status enabled">Published</span>
+                  </td>
+                  <td>
+                    <div class="table-actions">
+                      <button
+                        type="button"
+                        data-administrator-action="Edit project"
+                      >
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Delete project"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Northline Offices</td>
+                  <td>Commercial</td>
+                  <td>
+                    <span class="status disabled">Draft</span>
+                  </td>
+                  <td>
+                    <div class="table-actions">
+                      <button
+                        type="button"
+                        data-administrator-action="Edit project"
+                      >
+                        Edit
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Delete project"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-panel"
+          data-dashboard-panel="users"
+        >
+
+          <div class="dashboard-section-header">
+
+            <div>
+              <h3>Manage Users and Permissions</h3>
+
+              <p>
+                Administrators may create users, assign roles, reset
+                passwords, disable accounts, and delete accounts.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="primary-button"
+              data-administrator-action="Create user"
+            >
+              Create User
+            </button>
+
+          </div>
+
+          <div class="table-container">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Username</th>
+                  <th>Role</th>
+                  <th>Account Status</th>
+                  <th>Password Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>admin</td>
+                  <td>Administrator</td>
+                  <td>
+                    <span class="status enabled">Enabled</span>
+                  </td>
+                  <td>Change required</td>
+                  <td>
+                    <div class="table-actions">
+
+                      <button
+                        type="button"
+                        data-administrator-action="Change username"
+                      >
+                        Rename
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Assign permissions"
+                      >
+                        Permissions
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Reset password"
+                      >
+                        Reset Password
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Disable account"
+                      >
+                        Disable
+                      </button>
+
+                      <button
+                        type="button"
+                        data-administrator-action="Delete account"
+                      >
+                        Delete
+                      </button>
+
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div>
+        <h2>HighPoint Framing</h2>
+        <p>Precision framing for residential and commercial construction.</p>
+      </div>
+
+      <p>
+        &copy; <span class="current-year"></span> HighPoint Framing.
+        All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <div
+    class="modal"
+    id="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="login-modal-title"
+    aria-hidden="true"
+  >
+
+    <div class="modal-background" data-close-login></div>
+
+    <div class="modal-window">
+
+      <button
+        type="button"
+        class="modal-close-button"
+        aria-label="Close login window"
+        data-close-login
+      >
+        &times;
+      </button>
+
+      <h2 id="login-modal-title">Account Login</h2>
+
+      <p>Authorized company personnel only.</p>
+
+      <form id="login-form" novalidate>
+
+        <div class="form-group">
+          <label for="login-username">Username</label>
+
+          <input
+            id="login-username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+
+          <input
+            id="login-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+        </div>
+
+        <button type="submit" class="primary-button">
+          Sign In
+        </button>
+
+        <p
+          id="login-form-message"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+      <p class="security-message">
+        Production authentication requires a secure backend server, password
+        hashing, database storage, secure sessions, and server-side
+        authorization.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

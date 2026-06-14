@@ -1,0 +1,538 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="HighPoint Framing provides professional residential, multifamily, and commercial framing construction services."
+  >
+
+  <title>HighPoint Framing | Home</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Website header and navigation -->
+  <header class="site-header">
+
+    <div class="navigation-container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">HF</span>
+        <span>HighPoint Framing</span>
+      </a>
+
+      <button
+        class="mobile-menu-button"
+        id="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        Menu
+      </button>
+
+      <nav
+        class="main-navigation"
+        id="main-navigation"
+        aria-label="Primary navigation"
+      >
+        <a
+          href="index.html"
+          class="active"
+          aria-current="page"
+        >
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="account.html">
+          Account
+        </a>
+
+        <button
+          class="login-button"
+          type="button"
+          data-open-login
+        >
+          Login
+        </button>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Cover image and introduction -->
+    <section class="hero-section">
+
+      <div class="hero-content">
+
+        <p class="hero-label">
+          Built square. Built strong.
+        </p>
+
+        <h1>
+          Professional Framing Construction
+        </h1>
+
+        <p>
+          Residential, multifamily, and light-commercial framing completed
+          with precision, organization, and dependable workmanship.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#contact"
+            class="primary-button"
+          >
+            Request an Estimate
+          </a>
+
+          <a
+            href="projects.html"
+            class="secondary-button"
+          >
+            View Projects
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Company introduction -->
+    <section class="content-section">
+
+      <div class="section-heading">
+
+        <h2>
+          Framing That Keeps Your Project Moving
+        </h2>
+
+        <p>
+          HighPoint Framing provides accurate structural framing while
+          maintaining clear communication, organized job sites, and reliable
+          project schedules.
+        </p>
+
+      </div>
+
+      <div class="card-grid">
+
+        <article class="information-card">
+
+          <div class="card-number">
+            01
+          </div>
+
+          <h3>
+            Accurate Layout
+          </h3>
+
+          <p>
+            Measurements, wall locations, openings, elevations, and structural
+            details are carefully reviewed before construction begins.
+          </p>
+
+        </article>
+
+        <article class="information-card">
+
+          <div class="card-number">
+            02
+          </div>
+
+          <h3>
+            Organized Crews
+          </h3>
+
+          <p>
+            Defined responsibilities, clean material staging, and coordinated
+            daily work help reduce delays and unnecessary rework.
+          </p>
+
+        </article>
+
+        <article class="information-card">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <h3>
+            Reliable Completion
+          </h3>
+
+          <p>
+            Progress is monitored throughout construction, problems are
+            identified early, and punch-list items are completed promptly.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Contact and estimate section -->
+    <section
+      class="content-section contact-section"
+      id="contact"
+    >
+
+      <div class="contact-layout">
+
+        <div class="form-panel">
+
+          <div class="section-heading">
+
+            <h2>
+              Request an Estimate
+            </h2>
+
+            <p>
+              Tell us about your framing project, location, schedule, and
+              construction requirements.
+            </p>
+
+          </div>
+
+          <form
+            id="contact-form"
+            novalidate
+          >
+
+            <div class="form-group">
+
+              <label for="contact-name">
+                Name
+              </label>
+
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="contact-email">
+                Email Address
+              </label>
+
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="contact-phone">
+                Phone Number
+              </label>
+
+              <input
+                id="contact-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="project-type">
+                Project Type
+              </label>
+
+              <select
+                id="project-type"
+                name="projectType"
+              >
+                <option value="">
+                  Select a project type
+                </option>
+
+                <option value="custom-home">
+                  Custom Home
+                </option>
+
+                <option value="multifamily">
+                  Multifamily
+                </option>
+
+                <option value="commercial">
+                  Commercial
+                </option>
+
+                <option value="addition">
+                  Addition or Remodel
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="project-details">
+                Project Details
+              </label>
+
+              <textarea
+                id="project-details"
+                name="details"
+                placeholder="Describe the project size, location, plans, schedule, and framing requirements."
+                required
+              ></textarea>
+
+            </div>
+
+            <button
+              type="submit"
+              class="primary-button"
+            >
+              Submit Request
+            </button>
+
+            <p
+              id="contact-form-message"
+              class="form-message"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+        <!-- Company contact information -->
+        <aside class="contact-information-panel">
+
+          <h2>
+            Company Information
+          </h2>
+
+          <div class="contact-item">
+
+            <h3>
+              Phone
+            </h3>
+
+            <p>
+              (555) 014-2718
+            </p>
+
+          </div>
+
+          <div class="contact-item">
+
+            <h3>
+              Email
+            </h3>
+
+            <p>
+              estimating@highpointframing.com
+            </p>
+
+          </div>
+
+          <div class="contact-item">
+
+            <h3>
+              Business Hours
+            </h3>
+
+            <p>
+              Monday through Friday
+            </p>
+
+            <p>
+              7:00 a.m. to 5:00 p.m.
+            </p>
+
+          </div>
+
+          <div class="contact-item">
+
+            <h3>
+              Service Area
+            </h3>
+
+            <p>
+              Residential, multifamily, and light-commercial framing projects
+              throughout the surrounding region.
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Website footer -->
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+      <div>
+
+        <h2>
+          HighPoint Framing
+        </h2>
+
+        <p>
+          Precision framing for residential and commercial construction.
+        </p>
+
+      </div>
+
+      <p>
+        &copy;
+        <span class="current-year"></span>
+        HighPoint Framing. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- Login modal -->
+  <div
+    class="modal"
+    id="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="login-modal-title"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-background"
+      data-close-login
+    ></div>
+
+    <div class="modal-window">
+
+      <button
+        type="button"
+        class="modal-close-button"
+        aria-label="Close login window"
+        data-close-login
+      >
+        &times;
+      </button>
+
+      <h2 id="login-modal-title">
+        Account Login
+      </h2>
+
+      <p>
+        Authorized company personnel only.
+      </p>
+
+      <form
+        id="login-form"
+        novalidate
+      >
+
+        <div class="form-group">
+
+          <label for="login-username">
+            Username
+          </label>
+
+          <input
+            id="login-username"
+            name="username"
+            type="text"
+            autocomplete="username"
+            minlength="3"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="login-password">
+            Password
+          </label>
+
+          <input
+            id="login-password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            minlength="8"
+            required
+          >
+
+        </div>
+
+        <button
+          type="submit"
+          class="primary-button"
+        >
+          Sign In
+        </button>
+
+        <p
+          id="login-form-message"
+          class="form-message"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+      <p class="security-message">
+        Production login credentials must be verified by a secure backend
+        server. Passwords must never be stored in browser-side JavaScript.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+```
