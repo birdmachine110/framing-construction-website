@@ -1,6 +1,6 @@
 "use strict";
 
-const API_BASE_URL = "/api";
+
 
 document.addEventListener("DOMContentLoaded", function () {
   initializeMobileNavigation();
@@ -114,90 +114,50 @@ function initializeLoginModal() {
     }
   }
 
-  async function handleLoginSubmission(event) {
-    event.preventDefault();
+function handleLoginSubmission(event) {
+  event.preventDefault();
 
-    const username = loginForm.username.value.trim();
-    const password = loginForm.password.value;
+  const username = loginForm.username.value.trim();
+  const password = loginForm.password.value;
 
-    if (username.length < 3) {
-      displayMessage(
-        loginMessage,
-        "The username must contain at least three characters.",
-        "error"
-      );
+  if (username.length < 3) {
+    displayMessage(
+      loginMessage,
+      "The username must contain at least three characters.",
+      "error"
+    );
 
-      return;
-    }
+    return;
+  }
 
-    if (password.length < 8) {
-      displayMessage(
-        loginMessage,
-        "The password must contain at least eight characters.",
-        "error"
-      );
+  if (password.length < 8) {
+    displayMessage(
+      loginMessage,
+      "The password must contain at least eight characters.",
+      "error"
+    );
 
-      return;
-    }
+    return;
+  }
 
-    const submitButton =
-      loginForm.querySelector('button[type="submit"]');
+  if (username === "admin" && password === "password") {
+    sessionStorage.setItem("demoLoggedIn", "true");
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Signing In...";
+    displayMessage(
+      loginMessage,
+      "Demonstration login successful. Opening the dashboard...",
+      "success"
+    );
 
-    try {
-      const response = await fetch(
-        API_BASE_URL + "/auth/login",
-        {
-          method: "POST",
-
-          headers: {
-            "Content-Type": "application/json"
-          },
-
-          credentials: "include",
-
-          body: JSON.stringify({
-            username: username,
-            password: password
-          })
-        }
-      );
-
-      const responseData = await readJsonResponse(response);
-
-      if (!response.ok) {
-        throw new Error(
-          responseData.message || "The login attempt failed."
-        );
-      }
-
-      if (responseData.mustChangePassword) {
-        window.location.href =
-          "account.html?changePassword=required";
-      } else {
-        window.location.href = "account.html";
-      }
-    } catch (error) {
-      if (error instanceof TypeError) {
-        displayMessage(
-          loginMessage,
-          "The secure authentication server is not connected. " +
-          "Configure the backend API before using production login.",
-          "error"
-        );
-      } else {
-        displayMessage(
-          loginMessage,
-          error.message,
-          "error"
-        );
-      }
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "Sign In";
-    }
+    setTimeout(function () {
+      window.location.href = "account.html";
+    }, 700);
+  } else {
+    displayMessage(
+      loginMessage,
+      "Use username admin and password password for the demonstration.",
+      "error"
+    );
   }
 }
 
