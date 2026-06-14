@@ -1,6 +1,5 @@
+```javascript
 "use strict";
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   initializeMobileNavigation();
@@ -86,7 +85,6 @@ function initializeLoginModal() {
 
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
-
     document.body.classList.add("modal-open");
 
     const usernameInput =
@@ -102,7 +100,6 @@ function initializeLoginModal() {
   function closeLoginModal() {
     modal.classList.remove("open");
     modal.setAttribute("aria-hidden", "true");
-
     document.body.classList.remove("modal-open");
 
     if (loginMessage) {
@@ -114,50 +111,58 @@ function initializeLoginModal() {
     }
   }
 
-function handleLoginSubmission(event) {
-  event.preventDefault();
+  function handleLoginSubmission(event) {
+    event.preventDefault();
 
-  const username = loginForm.username.value.trim();
-  const password = loginForm.password.value;
+    const username = loginForm.username.value.trim();
+    const password = loginForm.password.value;
 
-  if (username.length < 3) {
-    displayMessage(
-      loginMessage,
-      "The username must contain at least three characters.",
-      "error"
-    );
+    if (username.length < 3) {
+      displayMessage(
+        loginMessage,
+        "The username must contain at least three characters.",
+        "error"
+      );
 
-    return;
-  }
+      return;
+    }
 
-  if (password.length < 8) {
-    displayMessage(
-      loginMessage,
-      "The password must contain at least eight characters.",
-      "error"
-    );
+    if (password.length < 8) {
+      displayMessage(
+        loginMessage,
+        "The password must contain at least eight characters.",
+        "error"
+      );
 
-    return;
-  }
+      return;
+    }
 
-  if (username === "admin" && password === "password") {
-    sessionStorage.setItem("demoLoggedIn", "true");
+    /*
+      Demonstration login only.
 
-    displayMessage(
-      loginMessage,
-      "Demonstration login successful. Opening the dashboard...",
-      "success"
-    );
+      This is not secure authentication. The username and password
+      can be viewed by anyone who opens the JavaScript source code.
+    */
 
-    setTimeout(function () {
-      window.location.href = "account.html";
-    }, 700);
-  } else {
-    displayMessage(
-      loginMessage,
-      "Use username admin and password password for the demonstration.",
-      "error"
-    );
+    if (username === "admin" && password === "password") {
+      sessionStorage.setItem("demoLoggedIn", "true");
+
+      displayMessage(
+        loginMessage,
+        "Demonstration login successful. Opening the dashboard...",
+        "success"
+      );
+
+      setTimeout(function () {
+        window.location.href = "account.html";
+      }, 700);
+    } else {
+      displayMessage(
+        loginMessage,
+        "Use username admin and password password for the demonstration.",
+        "error"
+      );
+    }
   }
 }
 
@@ -251,6 +256,14 @@ function initializeAdministratorDashboard() {
     return;
   }
 
+  const demoLoggedIn =
+    sessionStorage.getItem("demoLoggedIn") === "true";
+
+  if (demoLoggedIn) {
+    loginPanel.style.display = "none";
+    dashboard.classList.add("visible");
+  }
+
   if (previewButton) {
     previewButton.addEventListener("click", function () {
       loginPanel.style.display = "none";
@@ -259,23 +272,17 @@ function initializeAdministratorDashboard() {
   }
 
   if (logoutButton) {
-    logoutButton.addEventListener("click", async function () {
-      try {
-        await fetch(
-          API_BASE_URL + "/auth/logout",
-          {
-            method: "POST",
-            credentials: "include"
-          }
-        );
-      } catch (error) {
-        console.log(
-          "The backend logout route is not connected."
-        );
-      }
+    logoutButton.addEventListener("click", function () {
+      sessionStorage.removeItem("demoLoggedIn");
 
       dashboard.classList.remove("visible");
       loginPanel.style.display = "block";
+
+      displayMessage(
+        dashboardMessage,
+        "You have signed out of the demonstration dashboard.",
+        "success"
+      );
     });
   }
 
@@ -356,14 +363,6 @@ function emailAddressIsValid(emailAddress) {
   return emailPattern.test(emailAddress);
 }
 
-async function readJsonResponse(response) {
-  try {
-    return await response.json();
-  } catch (error) {
-    return {};
-  }
-}
-
 function updateCopyrightYear() {
   const yearElements =
     document.querySelectorAll(".current-year");
@@ -374,3 +373,4 @@ function updateCopyrightYear() {
     element.textContent = currentYear;
   });
 }
+```
